@@ -8,5 +8,7 @@ main:
      url: /year-archive/
    - title: "About Me!"
      url: /Pages/AboutMe/
+   - title: "Cat Corner"
+     url: /Pages/CatCorner/
   # - title: "Sitemap"
   #   url: /sitemap/
