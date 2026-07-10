@@ -17,11 +17,11 @@ minimal_mistakes_skin    : "catppuccin_mocha" #"default", "air", "aqua", "contra
 # Site Settings
 locale                   : "en-US"
 direction                : # "ltr" (default), "rtl" # set the direction of the page
-title                    : "Site Title"
+title                    : "Tyler J. Skaggs"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "Graduate Student at University of Oklahoma" # site tagline that appears below site title in masthead
 name                     : "Tyler Skaggs"
-description              : "An amazing website."
+description              : "Under Development (Hi Mom and Dad)."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
