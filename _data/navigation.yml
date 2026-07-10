@@ -1,8 +1,8 @@
 # main links
 main:
    - title: "About Me"
-     url: /docs/_pages/AboutMe/
-   - title: "Cat Corner"
+     url: /_pages/AboutMe/
+   - title: "Cat Corner!"
      url: /CatCorner/
    - title: "Running Photos"
      url: /_pages/Running/
