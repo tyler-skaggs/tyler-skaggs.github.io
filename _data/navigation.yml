@@ -1,7 +1,7 @@
 # main links
 main:
    - title: "About Me"
-     url: /Pages/
+     url: /Pages/AboutMe/
    - title: "Cat Corner"
      url: /Pages/CatCorner/
    - title: "Running Photos"
