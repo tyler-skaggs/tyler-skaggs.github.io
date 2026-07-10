@@ -2,7 +2,7 @@
 main:
    - title: "About Me"
      url: /docs/_pages/AboutMe/
-   - title: "Cat Corner!"
+   - title: "Cat Corner"
      url: /docs/_pages/CatCorner/
    - title: "Running Photos"
      url: /docs/_pages/Running/
