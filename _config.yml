@@ -116,7 +116,7 @@ analytics:
 author:
   name             : "Tyler Skaggs"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "*Site Under Construction* (Hi Mom and Dad <3!)."
+  bio              : "*Site Under Construction* (Hi Mom and Dad)."
   location         : "Norman, Oklahoma"
   email            : "tj.skaggs@ou.edu"
   # fediverse      : "@you@instance.social"  # used for fediverse:creator meta tag
