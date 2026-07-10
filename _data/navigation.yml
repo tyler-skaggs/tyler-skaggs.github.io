@@ -3,11 +3,10 @@ main:
    - title: "About Me!"
      url: /Pages/AboutMe/
    - title: "More"
-     url: "#"
-     children:
-      - title: "Cat Corner"
-        url: /Pages/CatCorner/
-      - title: "Running Photos"
-        url: /Pages/Running/
+     subfolderitems:
+       - name: "Cat Corner"
+         url: /Pages/CatCorner/
+       - name: "Running Photos"
+         url: /Pages/Running/
   # - title: "Sitemap"
   #   url: /sitemap/
