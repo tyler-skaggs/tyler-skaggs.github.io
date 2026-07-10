@@ -1,10 +1,10 @@
 # main links
 main:
    - title: "About Me"
-     url: /docs/_pages/AboutMe/
+     url: /AboutMe/
    - title: "Cat Corner"
-     url: /docs/_pages/CatCorner/
+     url: /CatCorner/
    - title: "Running Photos"
-     url: /docs/_pages/Running/
+     url: /Running/
   # - title: "Sitemap"
   #   url: /sitemap/
