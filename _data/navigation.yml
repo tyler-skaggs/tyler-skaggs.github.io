@@ -2,8 +2,8 @@
 main:
    - title: "About Me"
      url: /AboutMe/
-   - title: "Cat Corner!"
-     url: /CatCorner/
+   - title: "Cat Corner"
+     url: /_pages/CatCorner/
    - title: "Running Photos"
      url: /Running/
   # - title: "Sitemap"
