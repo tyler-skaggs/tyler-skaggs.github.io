@@ -172,7 +172,6 @@ include:
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
-  - index.html
   - vendor
   - .asset-cache
   - .bundle
