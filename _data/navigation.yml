@@ -2,9 +2,10 @@
 main:
    - title: "About Me"
      url: /_pages/AboutMe/
-   - title: "Cat Corner"
-     url: /_pages/CatCorner/
+   - title: "Other"
      children:
+       - title: "Cat Corner"
+         url: /_pages/CatCorner/
        - title: "Running Photos"
          url: /_pages/Running/
   # - title: "Sitemap"
