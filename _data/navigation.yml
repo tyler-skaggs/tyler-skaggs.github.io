@@ -4,7 +4,8 @@ main:
      url: /_pages/AboutMe/
    - title: "Cat Corner"
      url: /_pages/CatCorner/
-   - title: "Running Photos"
-     url: /_pages/Running/
+     children:
+       - title: "Running Photos"
+         url: /_pages/Running/
   # - title: "Sitemap"
   #   url: /sitemap/
