@@ -2,6 +2,13 @@
 main:
    - title: "About Me"
      url: /_pages/AboutMe/
+   - title: "Race Photos"
+     url: /_pages/Race_Photos/
+     children:
+       - title: "Iron Man 70.3 Boise"
+         url: /_pages/Race_Photos/Boise_IronMan2025/
+       - title: "OKC Memorial Marathon 2026"
+         url: /_pages/Race_Photos/OKC_Marathon2026/
    - title: "Other"
      children:
        - title: "Cat Corner"
