@@ -8,50 +8,44 @@ search: false
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-/* Dropdown Wrapper Container */
+/* Masthead Dropdown Container */
 .masthead__menu-item.dropdown {
   position: relative;
 
-  .caret {
-    font-size: 0.7em;
-    margin-left: 3px;
+  &:hover .dropdown-menu {
+    display: block;
   }
 }
 
-/* Hidden Dropdown Menu Menu Box */
+/* Hidden Dropdown Menu Styling */
 .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff; /* Match your theme's background */
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-  z-index: 10;
-  padding: 10px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  padding: 0.5rem 0;
   margin: 0;
   list-style: none;
+  z-index: 10;
 
   li {
     display: block;
-    width: 100%;
-    padding: 0;
+    margin: 0;
 
     a {
       display: block;
-      padding: 8px 20px;
-      color: #333;
+      padding: 0.5rem 1rem;
+      color: #333 !important;
       text-decoration: none;
-      white-space: nowrap;
+      font-size: 0.9em;
 
       &:hover {
-        background-color: #f1f1f1; /* Match your hover accent */
+        background-color: #f5f5f5;
+        color: #000 !important;
       }
     }
   }
-}
-
-/* Show Dropdown Menu on Hover */
-.masthead__menu-item.dropdown:hover .dropdown-menu {
-  display: block;
 }
