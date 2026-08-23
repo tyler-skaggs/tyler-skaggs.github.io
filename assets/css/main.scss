@@ -49,3 +49,57 @@ search: false
     }
   }
 }
+
+/* Target the specific masthead wrapper item */
+li.masthead__menu-item.dropdown {
+  position: relative !important;
+  display: inline-block !important; /* Forces the item to honor absolute child positioning */
+  overflow: visible !important;     /* Prevents theme from clipping the dropdown box */
+  padding-bottom: 10px;             /* Bridges the hover gap between link and dropdown */
+  margin-bottom: -10px;
+
+  &:hover .dropdown-menu {
+    display: block !important;      /* Ensures the hover toggle works explicitly */
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+/* Force positioning and visibility rules on the submenu */
+ul.dropdown-menu {
+  display: none;
+  position: absolute !important;
+  top: 100% !important;             /* Aligns directly below the navigation text */
+  left: 0 !important;
+  min-width: 180px !important;
+  background-color: #fff !important;/* Keeps dropdown from being see-through */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+  padding: 0.5rem 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+  z-index: 9999 !important;         /* Forces the menu to sit on top of everything else */
+
+  /* Ensure child list items layout vertically */
+  li {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+
+    a {
+      display: block !important;
+      padding: 0.6rem 1.2rem !important;
+      color: #333 !important;       /* Dark text default */
+      text-decoration: none !important;
+      font-size: 0.85em !important;
+      text-align: left !important;
+      line-height: 1.4 !important;
+
+      &:hover {
+        background-color: #f5f5f5 !important; /* Light grey backdrop on hover */
+        color: #000 !important;
+      }
+    }
+  }
+}
