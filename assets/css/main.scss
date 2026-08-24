@@ -8,69 +8,98 @@ search: false
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-/* Custom Masthead Hover Dropdown Styles */
-.visible-links {
-  overflow: visible !important; /* Prevents parent from clipping the dropdown */
-  display: flex;
-  align-items: center;
-}
-
-.masthead-dropdown {
+/* Masthead Dropdown Container */
+.masthead__menu-item.dropdown {
   position: relative;
 
-  /* Visual arrow indicator */
-  .dropdown-arrow {
-    font-size: 0.8em;
-    margin-left: 3px;
-    vertical-align: middle;
+  &:hover .dropdown-menu {
+    display: block;
   }
+}
 
-  /* Hidden dropdown container */
-  .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 180px;
-    background-color: $background-color; /* Matches theme background */
-    border: 1px solid $border-color;
-    border-radius: 4px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    list-style: none;
+/* Hidden Dropdown Menu Styling */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  padding: 0.5rem 0;
+  margin: 0;
+  list-style: none;
+  z-index: 10;
+
+  li {
+    display: block;
     margin: 0;
-    padding: 5px 0;
 
-    /* Smooth transition configuration */
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
-    z-index: 10;
-
-    li {
+    a {
       display: block;
-      margin: 0;
-      padding: 0;
+      padding: 0.5rem 1rem;
+      color: #333 !important;
+      text-decoration: none;
+      font-size: 0.9em;
 
-      a {
-        display: block;
-        padding: 8px 16px;
-        color: $text-color !important;
-        font-size: 0.9em;
-        text-decoration: none;
-        white-space: nowrap;
-
-        &:hover {
-          background-color: $primary-color;
-          color: #fff !important;
-        }
+      &:hover {
+        background-color: #f5f5f5;
+        color: #000 !important;
       }
     }
   }
+}
 
-  /* Hover state trigger */
+/* Target the specific masthead wrapper item */
+li.masthead__menu-item.dropdown {
+  position: relative !important;
+  display: inline-block !important; /* Forces the item to honor absolute child positioning */
+  overflow: visible !important;     /* Prevents theme from clipping the dropdown box */
+  padding-bottom: 10px;             /* Bridges the hover gap between link and dropdown */
+  margin-bottom: -10px;
+
   &:hover .dropdown-menu {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
+    display: block !important;      /* Ensures the hover toggle works explicitly */
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+/* Force positioning and visibility rules on the submenu */
+ul.dropdown-menu {
+  display: none;
+  position: absolute !important;
+  top: 100% !important;             /* Aligns directly below the navigation text */
+  left: 0 !important;
+  min-width: 180px !important;
+  background-color: #fff !important;/* Keeps dropdown from being see-through */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+  padding: 0.5rem 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+  z-index: 9999 !important;         /* Forces the menu to sit on top of everything else */
+
+  /* Ensure child list items layout vertically */
+  li {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+
+    a {
+      display: block !important;
+      padding: 0.6rem 1.2rem !important;
+      color: #333 !important;       /* Dark text default */
+      text-decoration: none !important;
+      font-size: 0.85em !important;
+      text-align: left !important;
+      line-height: 1.4 !important;
+
+      &:hover {
+        background-color: #f5f5f5 !important; /* Light grey backdrop on hover */
+        color: #000 !important;
+      }
+    }
   }
 }
