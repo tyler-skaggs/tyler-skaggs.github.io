@@ -8,98 +8,66 @@ search: false
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-/* Masthead Dropdown Container */
-.masthead__menu-item.dropdown {
-  position: relative;
+/* ==========================================================================
+   MINIMAL MISTAKES CUSTOM MASTHEAD DROPDOWN
+   ========================================================================== */
 
-  &:hover .dropdown-menu {
-    display: block;
-  }
-}
-
-/* Hidden Dropdown Menu Styling */
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 160px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-  padding: 0.5rem 0;
-  margin: 0;
-  list-style: none;
-  z-index: 10;
-
-  li {
-    display: block;
-    margin: 0;
-
-    a {
-      display: block;
-      padding: 0.5rem 1rem;
-      color: #333 !important;
-      text-decoration: none;
-      font-size: 0.9em;
-
-      &:hover {
-        background-color: #f5f5f5;
-        color: #000 !important;
-      }
-    }
-  }
-}
-
-/* Target the specific masthead wrapper item */
+/* 1. Base anchor setup for the dropdown container */
 li.masthead__menu-item.dropdown {
   position: relative !important;
-  display: inline-block !important; /* Forces the item to honor absolute child positioning */
-  overflow: visible !important;     /* Prevents theme from clipping the dropdown box */
-  padding-bottom: 10px;             /* Bridges the hover gap between link and dropdown */
-  margin-bottom: -10px;
-
-  &:hover .dropdown-menu {
-    display: block !important;      /* Ensures the hover toggle works explicitly */
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
+  display: inline-block !important;
+  overflow: visible !important;
+  padding-bottom: 12px; /* Invisible hover bridge to prevent sudden closure */
+  margin-bottom: -12px;
 }
 
-/* Force positioning and visibility rules on the submenu */
-ul.dropdown-menu {
-  display: none;
+/* 2. FORCE Hidden State explicitly by default */
+li.masthead__menu-item.dropdown ul.dropdown-menu {
+  display: none !important;      /* Forces it to disappear initially */
+  visibility: hidden !important;  /* Secondary fallback safety */
+  opacity: 0 !important;          /* Tertiary fallback safety */
+
+  /* Layout specifications */
   position: absolute !important;
-  top: 100% !important;             /* Aligns directly below the navigation text */
+  top: 100% !important;
   left: 0 !important;
   min-width: 180px !important;
-  background-color: #fff !important;/* Keeps dropdown from being see-through */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+  background-color: #fff !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
   padding: 0.5rem 0 !important;
   margin: 0 !important;
   list-style: none !important;
-  z-index: 9999 !important;         /* Forces the menu to sit on top of everything else */
+  z-index: 99999 !important;
+}
 
-  /* Ensure child list items layout vertically */
-  li {
-    display: block !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    float: none !important;
+/* 3. RE-ENABLE Display ONLY on active Hover */
+li.masthead__menu-item.dropdown:hover ul.dropdown-menu {
+  display: block !important;       /* Forces menu to appear */
+  visibility: visible !important;  /* Overrides visibility */
+  opacity: 1 !important;           /* Overrides opacity */
+}
 
-    a {
-      display: block !important;
-      padding: 0.6rem 1.2rem !important;
-      color: #333 !important;       /* Dark text default */
-      text-decoration: none !important;
-      font-size: 0.85em !important;
-      text-align: left !important;
-      line-height: 1.4 !important;
+/* 4. Dropdown item child spacing and visibility formatting */
+ul.dropdown-menu li {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+}
 
-      &:hover {
-        background-color: #f5f5f5 !important; /* Light grey backdrop on hover */
-        color: #000 !important;
-      }
-    }
-  }
+ul.dropdown-menu li a {
+  display: block !important;
+  padding: 0.6rem 1.2rem !important;
+  color: #333 !important; /* Dark neutral text color */
+  text-decoration: none !important;
+  font-size: 0.85rem !important;
+  text-align: left !important;
+  line-height: 1.4 !important;
+  border: none !important;
+}
+
+ul.dropdown-menu li a:hover {
+  background-color: #f5f5f5 !important; /* Subtle hover color change */
+  color: #000 !important;
 }
