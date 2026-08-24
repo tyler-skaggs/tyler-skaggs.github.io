@@ -2,6 +2,12 @@
 main:
    - title: "About Me"
      url: /_pages/AboutMe/
+   - title: "Lecture Notes"
+     children:
+       - title: "MATH 1823"
+       - title: "MATH 2433"
+       - title: "MATH 2924"
+       - title: "MATH 3113"
    - title: "Race Photos"
      url: /_pages/Race_Photos/
      children:
@@ -13,7 +19,5 @@ main:
      children:
        - title: "Cat Corner"
          url: /_pages/CatCorner/
-       - title: "Running Photos"
-         url: /_pages/Running/
   # - title: "Sitemap"
   #   url: /sitemap/
