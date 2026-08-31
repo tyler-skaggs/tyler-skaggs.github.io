@@ -7,8 +7,11 @@ main:
        - title: "MATH 1823"
          url: /_pages/LectureNotes/Math1823/
        - title: "MATH 2433"
+         url: /_pages/LectureNotes/Math2433/
        - title: "MATH 2924"
+         url: /_pages/LectureNotes/Math2924/
        - title: "MATH 3113"
+         url: /_pages/LectureNotes/Math3113/
    - title: "Race Photos"
      url: /_pages/Race_Photos/
      children:
