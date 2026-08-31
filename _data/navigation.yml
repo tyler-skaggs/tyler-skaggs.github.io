@@ -5,6 +5,7 @@ main:
    - title: "Lecture Notes"
      children:
        - title: "MATH 1823"
+         url: /_pages/LectureNotes/Math1823/
        - title: "MATH 2433"
        - title: "MATH 2924"
        - title: "MATH 3113"
