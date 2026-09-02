@@ -54,6 +54,7 @@ li.masthead__menu-item.dropdown:hover ul.dropdown-menu {
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
+  text-decoration-color: #2596be !important
 }
 
 /* 5. Submenu child elements and layout spacing rules */
@@ -79,5 +80,5 @@ ul.dropdown-menu li a {
 ul.dropdown-menu li a:hover {
   background-color: #39394D !important;
   color: #D3EAF5 !important;
-  text-decoration-color: #2596be
+  text-decoration-color: #2596be !important
 }
