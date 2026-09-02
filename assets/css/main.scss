@@ -18,7 +18,7 @@ search: false
 .greedy-nav,
 .visible-links {
   overflow: visible !important;
-},
+}
 
 
 /* 2. Anchor the dropdown menu item container */
@@ -79,4 +79,5 @@ ul.dropdown-menu li a {
 ul.dropdown-menu li a:hover {
   background-color: #39394D !important;
   color: #D3EAF5 !important;
+  text-decoration-color: #2596be
 }
