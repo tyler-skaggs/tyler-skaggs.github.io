@@ -16,12 +16,10 @@ search: false
 .masthead,
 .masthead__inner,
 .greedy-nav,
-.visible-links {
-  overflow: visible !important;
-},
-a:before{
+.visible-links a:before{
     background-color: #2596BE;
     }
+
 
 /* 2. Anchor the dropdown menu item container */
 li.masthead__menu-item.dropdown {
