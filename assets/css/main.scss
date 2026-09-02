@@ -18,17 +18,10 @@ search: false
 .greedy-nav,
 .visible-links {
   overflow: visible !important;
-  a:before{
-      content: "";
-      position: absolute;
-      left: 0;
-      bottome 0;
-      height: 4px;
-      background-color: #2596BE;
-      width: 100%;
-      transition: all 0.2s ease-in-out;
-      transform: scaleX(0) translate3d(0,0,0);}
-}
+},
+a:before{
+    background-color: #2596BE;
+    }
 
 /* 2. Anchor the dropdown menu item container */
 li.masthead__menu-item.dropdown {
